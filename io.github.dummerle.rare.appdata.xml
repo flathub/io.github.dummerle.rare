@@ -12,8 +12,9 @@
         </p>
         <p>Why Rare?</p>
         <ul>
-            <li>Uses less resources than the Epic Games Launcher or Heroic</li>
+            <li>Tries to be as lightweight as we can make it while still offering a feature-full experience</li>
             <li>Supports all major platforms (Windows, Linux, Mac)</li>
+            <li>Gets out of your way when you don't need it, allowing you to enjoy your games</li>
         </ul>
         <p>
             Rare supports all core features from the Epic Games Launcher,
@@ -34,6 +35,14 @@
     </screenshots>
     <url type="homepage">https://github.com/Dummerle/Rare</url>
     <releases>
+        <release version="1.9.0" date="2022-09-20">
+            <description>
+                <li>You are now able to close Rare and keep games running</li>
+                <li>More options for games like environment variables and MangoHUD</li>
+                <li>Many Code changes and optimizations</li>
+            </description>
+            <url>https://github.com/Dummerle/Rare/releases/tag/1.9.0</url>
+        </release>
         <release version="1.8.9" date="2022-04-10">
             <description>
                 <p>This is a bugfix release</p>
