@@ -48,8 +48,7 @@
             "name": "rare",
             "buildsystem": "simple",
             "build-commands": [
-                "rm pyproject.toml",
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \".\" --no-build-isolation --no-deps"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rare\" --no-build-isolation --no-deps"
             ],
             "sources": [
                 {
