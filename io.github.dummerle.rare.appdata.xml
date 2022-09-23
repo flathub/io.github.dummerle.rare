@@ -37,9 +37,9 @@
     <releases>
         <release version="1.9.0" date="2022-09-20">
             <description>
-                <li>You are now able to close Rare and keep games running</li>
-                <li>More options for games like environment variables and MangoHUD</li>
-                <li>Many Code changes and optimizations</li>
+                <p>You are now able to close Rare and keep games running</p>
+                <p>More options for games like environment variables and MangoHUD</p>
+                <p>Many Code changes and optimizations</p>
             </description>
             <url>https://github.com/Dummerle/Rare/releases/tag/1.9.0</url>
         </release>
