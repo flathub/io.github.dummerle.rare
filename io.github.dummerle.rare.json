@@ -53,8 +53,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b8/e6/e447fa533fa6f7c535dc01cc59a51f56fc0041a7702e428084e083b06b91/Rare-1.9.1-py3-none-any.whl",
-                    "sha256": "953fda653e7784b804003403638149d9ff45b36a4cddc5fc5ef35692926e6709"
+                    "url": "https://files.pythonhosted.org/packages/31/a6/a92dd4c4d8c36f0a3666b95e644dd6ef3508bf355d796b39f1e326d1e612/Rare-1.9.2-py3-none-any.whl",
+                    "sha256": "d3b0c5cc044517f27dbbef16f9b6d8e7e0d032f4b179841552d48babe0af0c36"
                 }
             ]
         }
