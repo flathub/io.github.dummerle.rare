@@ -48,13 +48,13 @@
             "name": "rare",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rare\" --no-build-isolation --no-deps"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \".\" --no-build-isolation --no-deps"
             ],
             "sources": [
                 {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b8/e6/e447fa533fa6f7c535dc01cc59a51f56fc0041a7702e428084e083b06b91/Rare-1.9.1-py3-none-any.whl",
-                    "sha256": "953fda653e7784b804003403638149d9ff45b36a4cddc5fc5ef35692926e6709"
+                    "type": "git",
+                    "url": "https://github.com/Dummerle/Rare",
+                    "tag": "1.9.2"
                 }
             ]
         }
