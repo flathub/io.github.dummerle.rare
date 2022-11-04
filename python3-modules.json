@@ -114,8 +114,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6d/58/f627a5ddbcb92c32c0dbc013a6cacd62a3f44a41664e65362904e22d7cec/legendary_gl-0.20.29-py3-none-any.whl",
-                    "sha256": "262f1b71a4f579f7561bff5bbc74d1bf5a619aa1fe031cfb5d9834d7e20b4a63"
+                    "url": "https://files.pythonhosted.org/packages/74/57/0a32cfee095cd12a4931038aa70d90540d8e79e66694c68ef0b17eaec749/legendary_gl-0.20.30-py3-none-any.whl",
+                    "sha256": "7fb2310d417a7e50cf4318165041474ca102b2a513d1f186cd4e770cf617185d"
                 }
             ]
         },
