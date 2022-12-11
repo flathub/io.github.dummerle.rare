@@ -15,7 +15,7 @@
     ],
     "modules": [
       	"python3-modules.json",
-        "python3-pyqt5.json",
+        "python3-pyqt5.yml",
         {
             "name": "desktop-files",
             "buildsystem": "simple",
