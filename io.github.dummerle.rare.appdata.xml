@@ -35,11 +35,11 @@
     </screenshots>
     <url type="homepage">https://github.com/Dummerle/Rare</url>
     <releases>
-        <release version="1.10.1" date="2023-05-04">
+        <release version="1.10.2" date="2023-05-26">
             <description>
                 <p>Some bug fixes and minor changes</p>
             </description>
-            <url>https://github.com/Dummerle/Rare/releases/tag/1.10.1</url>
+            <url>https://github.com/Dummerle/Rare/releases/tag/1.10.2</url>
 	</release>
     </releases>
     <content_rating type="oars-1.0"/>
