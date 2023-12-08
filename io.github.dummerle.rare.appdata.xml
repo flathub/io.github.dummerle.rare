@@ -26,20 +26,25 @@
     <screenshots>
         <screenshot type="default">
             <caption>Game Library</caption>
-            <image>https://github.com/Dummerle/Rare/blob/main/Screenshots/Rare.png?raw=true</image>
+            <image>https://github.com/RareDevs/Rare/blob/main/Screenshots/Rare.png?raw=true</image>
         </screenshot>
         <screenshot>
             <caption>Game info</caption>
-            <image>https://github.com/Dummerle/Rare/blob/main/Screenshots/GameInfo.png?raw=true</image>
+            <image>https://github.com/RareDevs/Rare/blob/main/Screenshots/GameInfo.png?raw=true</image>
         </screenshot>
     </screenshots>
-    <url type="homepage">https://github.com/Dummerle/Rare</url>
+    <url type="homepage">https://github.com/RareDevs/Rare</url>
     <releases>
-        <release version="1.10.3" date="2023-06-11">
+        <release version="1.10.6" date="2023-12-07">
             <description>
-                <p>Some bug fixes and minor changes</p>
+                <p>Garlic Crab (Hotfix 6)</p>
+                    <ul>
+                      <li>Fix a crash when checking for updates at startup</li>
+                      <li>Stop spamming logs about not finding game processes at startup</li>
+                      <li>Respect the default of closing to tray</li>
+                    </ul>
             </description>
-            <url>https://github.com/Dummerle/Rare/releases/tag/1.10.3</url>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.6</url>
 	</release>
     </releases>
     <content_rating type="oars-1.0"/>

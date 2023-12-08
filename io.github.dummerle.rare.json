@@ -1,13 +1,24 @@
 {
     "app-id": "io.github.dummerle.rare",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
+    "base": "com.riverbankcomputing.PyQt.BaseApp",
+    "base-version": "5.15-22.08",
+    "cleanup-commands": [
+        "/app/cleanup-BaseApp.sh"
+    ],
+    "build-options":
+    {
+        "env": {
+            "BASEAPP_REMOVE_WEBENGINE": "1"
+        }
+    },
     "command": "rare",
     "finish-args": [
         "--share=ipc",
         "--share=network",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
         "--filesystem=home",
         "--device=all",
@@ -15,7 +26,6 @@
     ],
     "modules": [
       	"python3-modules.json",
-        "python3-pyqt5.yml",
         {
             "name": "desktop-files",
             "buildsystem": "simple",
@@ -28,7 +38,7 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://raw.githubusercontent.com/Dummerle/Rare/main/misc/rare.desktop",
+                    "url": "https://raw.githubusercontent.com/RareDevs/Rare/main/misc/rare.desktop",
                     "sha256": "621cdaaee5537ae82f6423c4803f7146c2e38f78bc56b7f639e01066cc09b596"
                 },
                 {
@@ -37,7 +47,7 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://github.com/Dummerle/Rare/blob/main/rare/resources/images/Rare.svg?raw=true",
+                    "url": "https://github.com/RareDevs/Rare/blob/main/rare/resources/images/Rare.svg?raw=true",
                     "sha256": "428099ae33b227d998cead55471c0ef74c2a4a29739c4c0ae496e6d9fe3f63c9"
 
                 }
@@ -53,8 +63,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/Dummerle/Rare",
-                    "tag": "1.10.3"
+                    "url": "https://github.com/RareDevs/Rare",
+                    "tag": "1.10.6"
                 }
             ]
         }
