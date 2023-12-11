@@ -35,16 +35,15 @@
     </screenshots>
     <url type="homepage">https://github.com/RareDevs/Rare</url>
     <releases>
-        <release version="1.10.6" date="2023-12-07">
+        <release version="1.10.7" date="2023-12-07">
             <description>
-                <p>Garlic Crab (Hotfix 6)</p>
+                <p>Garlic Crab (Hotfix 7)</p>
                     <ul>
-                      <li>Fix a crash when checking for updates at startup</li>
-                      <li>Stop spamming logs about not finding game processes at startup</li>
-                      <li>Respect the default of closing to tray</li>
+                      <li>Update legendary to 0.20.34</li>
+                      <li>Apply a potential fix to errors due to the newly introduced file locking mechanism in legendary</li>
                     </ul>
             </description>
-            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.6</url>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.7</url>
 	</release>
     </releases>
     <content_rating type="oars-1.0"/>
