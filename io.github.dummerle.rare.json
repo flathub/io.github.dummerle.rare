@@ -25,6 +25,7 @@
         "--talk-name=org.freedesktop.Flatpak"
     ],
     "modules": [
+        "python3-orjson.json",
       	"python3-modules.json",
         {
             "name": "desktop-files",
