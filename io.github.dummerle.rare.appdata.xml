@@ -35,15 +35,11 @@
     </screenshots>
     <url type="homepage">https://github.com/RareDevs/Rare</url>
     <releases>
-        <release version="1.10.7" date="2023-12-07">
+        <release version="1.10.9" date="2023-12-17">
             <description>
-                <p>Garlic Crab (Hotfix 7)</p>
-                    <ul>
-                      <li>Update legendary to 0.20.34</li>
-                      <li>Apply a potential fix to errors due to the newly introduced file locking mechanism in legendary</li>
-                    </ul>
+                <p>Garlic Crab (Hotfix 9)</p>
             </description>
-            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.7</url>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.9</url>
 	</release>
     </releases>
     <content_rating type="oars-1.0"/>
