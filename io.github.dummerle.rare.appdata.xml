@@ -35,16 +35,11 @@
     </screenshots>
     <url type="homepage">https://github.com/RareDevs/Rare</url>
     <releases>
-        <release version="1.10.6" date="2023-12-07">
+        <release version="1.10.11" date="2023-12-17">
             <description>
-                <p>Garlic Crab (Hotfix 6)</p>
-                    <ul>
-                      <li>Fix a crash when checking for updates at startup</li>
-                      <li>Stop spamming logs about not finding game processes at startup</li>
-                      <li>Respect the default of closing to tray</li>
-                    </ul>
+                <p>Garlic Crab (Hotfix 11)</p>
             </description>
-            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.6</url>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.11</url>
 	</release>
     </releases>
     <content_rating type="oars-1.0"/>
