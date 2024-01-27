@@ -22,7 +22,8 @@
         "--socket=wayland",
         "--filesystem=home",
         "--device=all",
-        "--talk-name=org.freedesktop.Flatpak"
+        "--talk-name=org.freedesktop.Flatpak",
+        "--env=PYTHONPATH=\"\""
     ],
     "modules": [
         "python3-orjson.json",
@@ -31,7 +32,7 @@
             "name": "desktop-files",
             "buildsystem": "simple",
             "build-commands": [
-                "sed -i s/Icon=rare/Icon=io\.github\.dummerle\.rare/g rare.desktop",
+                "sed -i s/Icon=rare/Icon=io\\.github\\.dummerle\\.rare/g rare.desktop",
                 "install -D rare.desktop /app/share/applications/io.github.dummerle.rare.desktop",
                 "install -D io.github.dummerle.rare.appdata.xml /app/share/metainfo/io.github.dummerle.rare.appdata.xml",
                 "install -D Rare.svg /app/share/icons/hicolor/scalable/apps/io.github.dummerle.rare.svg"
