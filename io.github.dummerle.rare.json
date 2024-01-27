@@ -23,6 +23,7 @@
         "--filesystem=home",
         "--device=all",
         "--talk-name=org.freedesktop.Flatpak",
+        "--env=PYTHONSAFEPATH=1",
         "--env=PYTHONPATH="
     ],
     "modules": [
