@@ -23,7 +23,7 @@
         "--filesystem=home",
         "--device=all",
         "--talk-name=org.freedesktop.Flatpak",
-        "--env=PYTHONPATH=\"\""
+        "--env=PYTHONPATH="
     ],
     "modules": [
         "python3-orjson.json",
