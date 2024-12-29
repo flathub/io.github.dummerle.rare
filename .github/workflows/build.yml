@@ -1,0 +1,50 @@
+
+name: "Flatpak"
+
+
+on:
+  workflow_dispatch:
+  release:
+    types: [ published ]
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+
+permissions:
+  contents: write
+
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:kde-6.7
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+      - uses: flatpak/flatpak-github-actions/flatpak-builder@master
+        with:
+          bundle: rare-${{ github.ref_name }}.flatpak
+          arch: x86_64
+          manifest-path: io.github.dummerle.rare.yaml
+          cache-key: flatpak-builder-${{ github.sha }}
+
+  release:
+    needs: build
+    if: github.event_name == 'release'
+    name: "Release"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: rare-${{ github.ref_name }}-x86_64
+      - uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: rare-${{ github.ref_name }}.flatpak
+          asset_name: rare-${{ github.ref_name }}.flatpak
+          tag: ${{ github.ref_name }}
+          overwrite: true
