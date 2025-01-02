@@ -4,10 +4,13 @@
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <name>Rare</name>
-    <summary>A GUI for legendary, an open source Epic Games alternative</summary>
+    <developer id="io.github">
+        <name>RareDevs</name>
+    </developer>
+    <summary>Open source alternative for Epic Games Launcher, using Legendary</summary>
     <description>
         <p>
-            Rare is a frontend for legendary, an open source alternative for
+            Rare is a frontend for legendary-gl, an open source alternative for
             the Epic Games Launcher.
         </p>
         <p>Why Rare?</p>
@@ -25,21 +28,22 @@
     <launchable type="desktop-id">io.github.dummerle.rare.desktop</launchable>
     <screenshots>
         <screenshot type="default">
-            <caption>Game Library</caption>
-            <image>https://github.com/RareDevs/Rare/blob/main/Screenshots/Rare.png?raw=true</image>
+            <caption>Game library</caption>
+            <image>https://github.com/RareDevs/Rare/blob/main/docs/assets/RareLibraryIcon.png?raw=true</image>
         </screenshot>
         <screenshot>
-            <caption>Game info</caption>
-            <image>https://github.com/RareDevs/Rare/blob/main/Screenshots/GameInfo.png?raw=true</image>
+            <caption>Game details</caption>
+            <image>https://github.com/RareDevs/Rare/blob/main/docs/assets/RareGameInfo.png?raw=true</image>
         </screenshot>
     </screenshots>
     <url type="homepage">https://github.com/RareDevs/Rare</url>
     <releases>
-        <release version="1.10.11" date="2023-12-17">
+        <release version="1.11.2" date="2025-01-01">
             <description>
-                <p>Garlic Crab (Hotfix 11)</p>
+                <p>Boga Discus (Hotfix 2)</p>
             </description>
-            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.11</url>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.11.2</url>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.0</url>
 	</release>
     </releases>
     <content_rating type="oars-1.0"/>

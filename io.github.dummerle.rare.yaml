@@ -1,0 +1,51 @@
+id: io.github.dummerle.rare
+runtime: org.kde.Platform
+runtime-version: '6.7'
+sdk: org.kde.Sdk
+base: io.qt.PySide.BaseApp
+base-version: '6.7'
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
+build-options:
+  env:
+    BASEAPP_REMOVE_WEBENGINE: '1'
+command: rare
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --filesystem=home
+  - --device=all
+  - --talk-name=org.freedesktop.Flatpak
+  - --env=PYTHONNOUSERSITE=1,
+  - --env=PYTHONSAFEPATH=1,
+  - --env=PYTHONPATH=
+modules:
+  - name: metadata
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 io.github.dummerle.rare.appdata.xml  ${FLATPAK_DEST}/share/metainfo/io.github.dummerle.rare.appdata.xml
+    sources:
+      - type: file
+        path: io.github.dummerle.rare.appdata.xml
+  - name: rare
+    buildsystem: simple
+    build-commands:
+      - python3 setup.py bdist_wheel
+      - python3 -m installer -p ${FLATPAK_DEST} dist/*.whl
+      - sed -i s/Icon=rare/Icon=io\.github\.dummerle\.rare/g misc/rare.desktop
+      - install -Dm644 misc/rare.desktop
+          ${FLATPAK_DEST}/share/applications/io.github.dummerle.rare.desktop
+      - install -Dm644 rare/resources/images/Rare.svg
+          ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/io.github.dummerle.rare.svg
+      - install -Dm644 rare/resources/images/Rare.png
+          ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/io.github.dummerle.rare.png
+    sources:
+      - type: git
+        url: https://github.com/RareDevs/Rare.git
+        tag: '1.11.2'
+        disable-shallow-clone: true
+    modules:
+      - python3-build-wheels.yaml
+      - python3-runtime-wheels.yaml
