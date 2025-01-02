@@ -43,9 +43,19 @@
                 <p>Boga Discus (Hotfix 2)</p>
             </description>
             <url>https://github.com/RareDevs/Rare/releases/tag/1.11.2</url>
-            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.0</url>
-	</release>
+        </release>
+        <release version="1.11.0" date="2025-01-01">
+            <description>
+                <p>Boga Discus</p>
+            </description>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.11.0</url>
+        </release>
+        <release version="1.10.11" date="2023-12-17">
+            <description>
+                <p>Garlic Crab (Hotfix 11)</p>
+            </description>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.10.11</url>
+        </release>
     </releases>
     <content_rating type="oars-1.0"/>
-
 </component>
