@@ -40,11 +40,11 @@ jobs:
     steps:
       - uses: actions/download-artifact@v6
         with:
-          name: rare-${{ github.ref_name }}-x86_64
+          name: rare-${{ github.ref_name }}-x86_64.flatpak
       - uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: rare-${{ github.ref_name }}.flatpak
-          asset_name: rare-${{ github.ref_name }}.flatpak
+          file: rare-${{ github.ref_name }}-x86_64.flatpak
+          asset_name: rare-${{ github.ref_name }}-x86_64.flatpak
           tag: ${{ github.ref_name }}
           overwrite: true
