@@ -15,9 +15,14 @@ finish-args:
   - --share=network
   - --socket=fallback-x11
   - --socket=wayland
-  - --filesystem=xdg-config
-  - --filesystem=xdg-data
-  - --filesystem=xdg-cache
+  - --filesystem=xdg-desktop:create
+  - --filesystem=xdg-config/Rare:create
+  - --filesystem=xdg-config/legendary:create
+  - --filesystem=xdg-data/Rare:create
+  - --filesystem=xdg-data/applications:create
+  - --filesystem=xdg-data/Steam:ro
+  - --filesystem=xdg-cache/Rare:create
+  - --filesystem=home/Games:create
   - --filesystem=home
   - --device=all
   - --talk-name=org.freedesktop.Flatpak
