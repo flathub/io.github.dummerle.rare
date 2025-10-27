@@ -38,6 +38,12 @@
     </screenshots>
     <url type="homepage">https://github.com/RareDevs/Rare</url>
     <releases>
+        <release version="1.11.3.221" date="2025-10-01">
+            <description>
+                <p>Boga Discus (Hotfix 3) (dev 221)</p>
+            </description>
+            <url>https://github.com/RareDevs/Rare/releases/tag/1.11.3.221</url>
+        </release>
         <release version="1.11.3" date="2025-01-11">
             <description>
                 <p>Boga Discus (Hotfix 3)</p>

@@ -1,0 +1,190 @@
+# Generated with flatpak-pip-generator -r requirements-source.in --yaml
+build-commands: []
+buildsystem: simple
+modules:
+  - name: python3-legendary-gl
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "." --no-build-isolation
+    sources:
+      - &id001
+        type: file
+        url: https://files.pythonhosted.org/packages/e4/37/af0d2ef3967ac0d6113837b44a4f0bfe1328c2b9763bd5b1744520e5cfed/certifi-2025.10.5-py3-none-any.whl
+        sha256: 0f212c2744a9bb6de0c56639a6f68afe01ecd92d91f14ae897c4fe7bbeeef0de
+      - &id002
+        type: file
+        url: https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz
+        sha256: 94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a
+      - &id003
+        type: file
+        url: https://files.pythonhosted.org/packages/76/91/7216b27286936c16f5b4d0c530087e4a54eead683e6b0b73dd0c64844af6/filelock-3.20.0-py3-none-any.whl
+        sha256: 339b4732ffda5cd79b13f4e2711a31b0365ce445d95d243bb996273d072546a2
+      - &id004
+        type: file
+        url: https://files.pythonhosted.org/packages/0e/61/66938bbb5fc52dbdf84594873d5b51fb1f7c7794e9c0f5bd885f30bc507b/idna-3.11-py3-none-any.whl
+        sha256: 771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea
+      - type: git
+        url: https://github.com/RareDevs/legendary
+        commit: 4074375b789a4c2c87f72307bc9581900e34fa50
+      - &id008
+        type: file
+        url: https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl
+        sha256: 2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6
+      - &id010
+        type: file
+        url: https://files.pythonhosted.org/packages/91/23/7c1096731c15c83826cb0dd42078b561a838aed44c36f370aeb815168106/requests_futures-1.0.2-py2.py3-none-any.whl
+        sha256: a3534af7c2bf670cd7aa730716e9e7d4386497554f87792be7514063b8912897
+      - &id009
+        type: file
+        url: https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl
+        sha256: e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc
+  - name: python3-vdf
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "." --no-build-isolation
+    sources:
+      - type: git
+        url: https://github.com/solsticegamestudios/vdf
+        commit: be1f7220238022f8b29fe747f0b643f280bfdb6e
+  - name: python3-build
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "build==1.3.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/cb/8c/2b30c12155ad8de0cf641d76a8b396a16d2c36bc6d50b621a62b7c4567c1/build-1.3.0-py3-none-any.whl
+        sha256: 7145f0b5061ba90a1500d60bd1b13ca0a8a4cebdd0cc16ed8adf1c0e739f43b4
+      - &id005
+        type: file
+        url: https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl
+        sha256: 29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484
+      - &id006
+        type: file
+        url: https://files.pythonhosted.org/packages/bd/24/12818598c362d7f300f18e74db45963dbcb85150324092410c8b49405e42/pyproject_hooks-1.2.0-py3-none-any.whl
+        sha256: 9e5c6bfa8dcc30091c74b0cf803c81fdd29d94f01992a7707bc97babb1141913
+  - name: python3-certifi
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "certifi==2025.10.5" --no-build-isolation
+    sources:
+      - *id001
+  - name: python3-charset-normalizer
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "charset-normalizer==3.4.4" --no-build-isolation
+    sources:
+      - *id002
+  - name: python3-filelock
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "filelock==3.20.0" --no-build-isolation
+    sources:
+      - *id003
+  - name: python3-idna
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "idna==3.11" --no-build-isolation
+    sources:
+      - *id004
+  - name: python3-installer
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "installer==0.7.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/e5/ca/1172b6638d52f2d6caa2dd262ec4c811ba59eee96d54a7701930726bce18/installer-0.7.0-py3-none-any.whl
+        sha256: 05d1933f0a5ba7d8d6296bb6d5018e7c94fa473ceb10cf198a92ccea19c27b53
+  - name: python3-packaging
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "packaging==25.0" --no-build-isolation
+    sources:
+      - *id005
+  - name: python3-pypresence
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pypresence==4.6.1" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/bd/0d/1c817c6769ce0b64cc0dcc20bc9d0edb4dc560e83a3b5f0d5cbda04c3d35/pypresence-4.6.1-py3-none-any.whl
+        sha256: 33d4549fcdf4102f81935df4ba587bacb22193e0c50c541d1ab9329b21df33cd
+  - name: python3-pyproject_hooks
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pyproject_hooks==1.2.0" --no-build-isolation
+    sources:
+      - *id006
+  - name: python3-QtAwesome
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "QtAwesome==1.4.0" --no-build-isolation
+    sources:
+      - &id007
+        type: file
+        url: https://files.pythonhosted.org/packages/69/76/37c0ccd5ab968a6a438f9c623aeecc84c202ab2fabc6a8fd927580c15b5a/QtPy-2.4.3-py3-none-any.whl
+        sha256: 72095afe13673e017946cc258b8d5da43314197b741ed2890e563cf384b51aa1
+      - *id005
+      - type: file
+        url: https://files.pythonhosted.org/packages/a5/ee/6e6c6715129c929af2d95ddb2e9decf54c1beffe58f336911197aacc0448/qtawesome-1.4.0-py3-none-any.whl
+        sha256: a4d689fa071c595aa6184171ce1f0f847677cb8d2db45382c43129f1d72a3d93
+  - name: python3-QtPy
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "QtPy==2.4.3" --no-build-isolation
+    sources:
+      - *id007
+      - *id005
+  - name: python3-requests
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "requests==2.32.5" --no-build-isolation
+    sources:
+      - *id001
+      - *id002
+      - *id004
+      - *id008
+      - *id009
+  - name: python3-requests-futures
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "requests-futures==1.0.2" --no-build-isolation
+    sources:
+      - *id001
+      - *id002
+      - *id004
+      - *id008
+      - *id010
+      - *id009
+  - name: python3-setuptools-scm
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "setuptools-scm==9.2.2" --no-build-isolation
+    sources:
+      - *id005
+      - type: file
+        url: https://files.pythonhosted.org/packages/3d/ea/ac2bf868899d0d2e82ef72d350d97a846110c709bacf2d968431576ca915/setuptools_scm-9.2.2-py3-none-any.whl
+        sha256: 30e8f84d2ab1ba7cb0e653429b179395d0c33775d54807fc5f1dd6671801aef7
+  - name: python3-urllib3
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "urllib3==2.5.0" --no-build-isolation
+    sources:
+      - *id009
+name: python3-requirements-source.in

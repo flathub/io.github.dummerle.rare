@@ -1,9 +1,9 @@
 id: io.github.dummerle.rare
 runtime: org.kde.Platform
-runtime-version: '6.7'
+runtime-version: '6.9'
 sdk: org.kde.Sdk
 base: io.qt.PySide.BaseApp
-base-version: '6.7'
+base-version: '6.9'
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 build-options:
@@ -15,6 +15,9 @@ finish-args:
   - --share=network
   - --socket=fallback-x11
   - --socket=wayland
+  - --filesystem=xdg-config
+  - --filesystem=xdg-data
+  - --filesystem=xdg-cache
   - --filesystem=home
   - --device=all
   - --talk-name=org.freedesktop.Flatpak
@@ -25,15 +28,21 @@ modules:
   - name: metadata
     buildsystem: simple
     build-commands:
-      - install -Dm644 io.github.dummerle.rare.appdata.xml  ${FLATPAK_DEST}/share/metainfo/io.github.dummerle.rare.appdata.xml
+      - install -Dm644 io.github.dummerle.rare.appdata.xml ${FLATPAK_DEST}/share/metainfo/io.github.dummerle.rare.appdata.xml
     sources:
       - type: file
         path: io.github.dummerle.rare.appdata.xml
   - name: rare
     buildsystem: simple
+    env:
+      SETUPTOOLS_SCM_PRETEND_VERSION: '1.11.3.221'
     build-commands:
+      - ./tools/qrc2py.sh --force
+      - ./tools/ts2qm.py
+
       - python3 setup.py bdist_wheel
       - python3 -m installer -p ${FLATPAK_DEST} dist/*.whl
+
       - sed -i s/Icon=rare/Icon=io\.github\.dummerle\.rare/g misc/rare.desktop
       - install -Dm644 misc/rare.desktop
           ${FLATPAK_DEST}/share/applications/io.github.dummerle.rare.desktop
@@ -44,8 +53,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/RareDevs/Rare.git
-        tag: '1.11.3'
+        tag: '1.11.3.221'
         disable-shallow-clone: true
     modules:
-      - python3-build-wheels.yaml
-      - python3-runtime-wheels.yaml
+      - python3-requirements-source.yaml
+      - python3-requirements-binary.yaml
