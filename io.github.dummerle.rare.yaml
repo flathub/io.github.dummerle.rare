@@ -21,6 +21,7 @@ finish-args:
   - --filesystem=xdg-config/legendary:create
   - --filesystem=xdg-data/Rare:create
   - --filesystem=xdg-data/applications:create
+  - --filesystem=xdg-data/umu:ro
   - --filesystem=xdg-data/Steam:ro
   - --filesystem=xdg-cache/Rare:create
   - --filesystem=home/Games:create
