@@ -9,6 +9,7 @@ cleanup-commands:
 build-options:
   env:
     BASEAPP_REMOVE_WEBENGINE: '1'
+    SETUPTOOLS_SCM_PRETEND_VERSION: '1.11.3.255'
 command: rare
 finish-args:
   - --share=ipc
@@ -39,8 +40,6 @@ modules:
         path: io.github.dummerle.rare.appdata.xml
   - name: rare
     buildsystem: simple
-    env:
-      SETUPTOOLS_SCM_PRETEND_VERSION: '1.11.3.255'
     build-commands:
       - ./tools/qrc2py.sh --force
       - ./tools/ts2qm.py
