@@ -40,7 +40,7 @@ modules:
   - name: rare
     buildsystem: simple
     env:
-      SETUPTOOLS_SCM_PRETEND_VERSION: '1.11.3.221'
+      SETUPTOOLS_SCM_PRETEND_VERSION: '1.11.3.255'
     build-commands:
       - ./tools/qrc2py.sh --force
       - ./tools/ts2qm.py
@@ -58,7 +58,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/RareDevs/Rare.git
-        tag: '1.11.3.221'
+        tag: '1.11.3.255'
         disable-shallow-clone: true
     modules:
       - python3-requirements-source.yaml
