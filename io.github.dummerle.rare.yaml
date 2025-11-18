@@ -9,7 +9,7 @@ cleanup-commands:
 build-options:
   env:
     BASEAPP_REMOVE_WEBENGINE: '1'
-    SETUPTOOLS_SCM_PRETEND_VERSION: '1.11.3.255'
+    SETUPTOOLS_SCM_PRETEND_VERSION: '1.11.3.286'
 command: rare
 finish-args:
   - --share=ipc
@@ -58,7 +58,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/RareDevs/Rare.git
-        tag: '1.11.3.255'
+        tag: '1.11.3.286'
         disable-shallow-clone: true
     modules:
       - python3-requirements-source.yaml
