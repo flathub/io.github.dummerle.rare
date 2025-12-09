@@ -26,7 +26,7 @@ modules:
         sha256: 771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea
       - type: git
         url: https://github.com/RareDevs/legendary
-        commit: 4074375b789a4c2c87f72307bc9581900e34fa50
+        commit: rare-1.12.0
       - &id008
         type: file
         url: https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl

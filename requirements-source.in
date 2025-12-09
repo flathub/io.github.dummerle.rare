@@ -4,7 +4,7 @@ charset-normalizer==3.4.4
 filelock==3.20.0
 idna==3.11
 installer==0.7.0
-legendary-gl @ git+https://github.com/RareDevs/legendary@4074375b789a4c2c87f72307bc9581900e34fa50
+legendary-gl @ git+https://github.com/RareDevs/legendary@rare-1.12.0
 packaging==25.0
 pypresence==4.6.1
 pyproject_hooks==1.2.0
