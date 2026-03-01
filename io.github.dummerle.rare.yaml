@@ -24,8 +24,8 @@ finish-args:
   - --filesystem=home
   - --device=all
   - --talk-name=org.freedesktop.Flatpak
-  - --env=PYTHONNOUSERSITE=1,
-  - --env=PYTHONSAFEPATH=1,
+  - --env=PYTHONNOUSERSITE=1
+  - --env=PYTHONSAFEPATH=1
   - --env=PYTHONPATH=
 modules:
   - name: metadata
