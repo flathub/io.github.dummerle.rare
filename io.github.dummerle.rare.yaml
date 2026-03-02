@@ -18,8 +18,8 @@ finish-args:
   - --socket=wayland
   - --filesystem=xdg-desktop:create
   - --filesystem=xdg-data/applications:create
-  - --filesystem=xdg-data/umu:ro
-  - --filesystem=xdg-data/Steam:ro
+  - --filesystem=xdg-data/umu:rw
+  - --filesystem=xdg-data/Steam:rw
   - --filesystem=home/Games:create
   - --filesystem=home
   - --device=all
