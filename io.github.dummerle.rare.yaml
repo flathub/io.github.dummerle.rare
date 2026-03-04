@@ -21,7 +21,6 @@ finish-args:
   - --filesystem=xdg-data/umu:rw
   - --filesystem=xdg-data/Steam:rw
   - --filesystem=home/Games:create
-  - --filesystem=home
   - --device=all
   - --talk-name=org.freedesktop.Flatpak
   - --env=PYTHONNOUSERSITE=1
