@@ -36,6 +36,10 @@
             <image>https://github.com/RareDevs/Rare/blob/main/docs/assets/RareGameInfo.png?raw=true</image>
         </screenshot>
     </screenshots>
+    <branding>
+      <color type="primary" scheme_preference="light">#483d8b</color>
+      <color type="primary" scheme_preference="dark">#483d8b</color>
+    </branding>
     <url type="bugtracker">https://github.com/RareDevs/Rare/issues</url>
     <url type="homepage">https://github.com/RareDevs/Rare</url>
     <url type="translate">https://explore.transifex.com/rare-1/rare/</url>
