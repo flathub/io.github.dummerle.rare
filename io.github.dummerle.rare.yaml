@@ -1,14 +1,15 @@
 id: io.github.dummerle.rare
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 base: io.qt.PySide.BaseApp
-base-version: '6.9'
+base-version: '6.10'
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 build-options:
   env:
     BASEAPP_REMOVE_WEBENGINE: '1'
+    BASEAPP_DISABLE_NUMPY: '1'
     SETUPTOOLS_SCM_PRETEND_VERSION: '1.12.0.102'
 command: rare
 finish-args:
@@ -54,6 +55,7 @@ modules:
       - type: git
         url: https://github.com/RareDevs/Rare.git
         tag: '1.12.0.102'
+        commit: 'f593f1456a82aa2d965af15fca7c3fe9a7634a89'
         disable-shallow-clone: true
     modules:
       - python3-requirements-source.yaml
