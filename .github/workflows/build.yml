@@ -20,32 +20,51 @@ jobs:
   build:
     if: ${{ github.repository == 'RareDevs/io.github.dummerle.rare' }}
     name: "Build"
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - arch: x86_64
+            runner: ubuntu-24.04
+          - arch: aarch64
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
     container:
-      image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.9
+      image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.10
       options: --privileged
     steps:
       - uses: actions/checkout@v6
       - uses: flatpak/flatpak-github-actions/flatpak-builder@master
         with:
           bundle: rare-${{ github.ref_name }}.flatpak
-          arch: x86_64
           manifest-path: io.github.dummerle.rare.yaml
+          arch: ${{ matrix.arch }}
           cache-key: flatpak-builder-${{ github.sha }}
 
   release:
     needs: build
     if: ${{ github.repository == 'RareDevs/io.github.dummerle.rare' && github.event_name == 'release' }}
     name: "Release"
+    strategy:
+      matrix:
+        arch: [ x86_64, aarch64 ]
     runs-on: ubuntu-slim
     steps:
-      - uses: actions/download-artifact@v7
+      - name: Download ${{ matrix.arch }} artifact
+        uses: actions/download-artifact@v7
         with:
-          name: rare-${{ github.ref_name }}-x86_64.flatpak
-      - uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: rare-${{ github.ref_name }}.flatpak
-          asset_name: rare-${{ github.ref_name }}-x86_64.flatpak
-          tag: ${{ github.ref_name }}
-          overwrite: true
+          name: rare-${{ github.ref_name }}-${{ matrix.arch }}.flatpak
+      - name: Rename ${{ matrix.arch }} artifact
+        shell: bash
+        run: |
+          mv rare-${{ github.ref_name }}.flatpak rare-${{ github.ref_name }}-${{ matrix.arch }}.flatpak
+      - name: Upload ${{ matrix.arch }} artifact to release
+        shell: bash
+        run: >-
+          gh
+          --repo "${{ github.server_url }}/${{ github.repository }}"
+          release upload
+          ${{ github.ref_name }}
+          rare-${{ github.ref_name }}-${{ matrix.arch }}.flatpak
+          --clobber
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
