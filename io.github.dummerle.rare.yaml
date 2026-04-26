@@ -10,7 +10,7 @@ build-options:
   env:
     BASEAPP_REMOVE_WEBENGINE: '1'
     BASEAPP_DISABLE_NUMPY: '1'
-    SETUPTOOLS_SCM_PRETEND_VERSION: '1.12.0.116'
+    SETUPTOOLS_SCM_PRETEND_VERSION: '1.12.0.154'
 command: rare
 finish-args:
   - --share=ipc
@@ -23,6 +23,7 @@ finish-args:
   - --filesystem=xdg-data/Steam:rw
   - --filesystem=home/Games:create
   - --device=all
+  - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=org.freedesktop.Flatpak
   - --env=PYTHONNOUSERSITE=1
   - --env=PYTHONSAFEPATH=1
@@ -54,9 +55,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/RareDevs/Rare.git
-        tag: '1.12.0.116'
-        commit: '3388ab6840f3f3bfc017e29cfa261164cab983c6'
+        tag: '1.12.0.154'
+        commit: 'f805a83142006327c89e936571fc8cdb7e11acf5'
         disable-shallow-clone: true
     modules:
-      - python3-requirements-source.yaml
       - python3-requirements-binary.yaml
+      - python3-requirements-source.yaml
