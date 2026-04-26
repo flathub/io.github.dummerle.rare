@@ -1,2 +1,4 @@
-orjson==3.11.5
+pycryptodomex==3.23.0
+orjson==3.11.8
 ruff==0.14.11
+uv-build==0.11.7
