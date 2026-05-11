@@ -12,7 +12,7 @@ QtAwesome==1.4.0
 QtPy==2.4.3
 requests==2.32.5
 requests-futures==1.0.2
-setuptools==80.9.0
+setuptools==82.0.0
 setuptools-scm==9.2.2
 urllib3==2.6.3
 vdf @ git+https://github.com/solsticegamestudios/vdf@be1f7220238022f8b29fe747f0b643f280bfdb6e
