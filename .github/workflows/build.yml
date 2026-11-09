@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Download ${{ matrix.arch }} artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: rare-${{ github.ref_name }}-${{ matrix.arch }}.flatpak
       - name: Rename ${{ matrix.arch }} artifact
