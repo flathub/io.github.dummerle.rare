@@ -26,6 +26,10 @@
         </p>
     </description>
     <launchable type="desktop-id">io.github.dummerle.rare.desktop</launchable>
+    <categories>
+        <category>Game</category>
+        <category>PackageManager</category>
+    </categories>
     <screenshots>
         <screenshot type="default">
             <caption>Game library</caption>
